@@ -1,0 +1,36 @@
+import numpy as np
+#1d
+a = np.array([1,2,3,5,8])
+print(np.append(a,50))
+print(np.insert(a,1,100)) #insert(array,index,data)
+print(a)
+print(np.insert(a,(1,3),200))#insert(array,index(1,3),data)
+print("---------------------------------------------------------")
+#2d
+b = np.array([[1, 2], [3, 4]])
+print(b)
+print("                                               ")
+print(np.insert(b,1,100,axis=0))#insert(array,index,data,axis(0=นอน)(1=ตั้ง))
+print("                                               ")
+print(np.insert(b,1,100,axis=1))#insert(array,index,data,axis(0=นอน)(1=ตั้ง))
+print("                                               ")
+print(np.insert(b,1,[10,20],axis=0))
+print("                                               ")
+print(np.insert(b,1,[10,20],axis=1))
+print("==========================================================")
+#del
+#1d
+c = np.arange(1,13)
+d = np.arange(1,13).reshape(4,3)
+print(c)
+print("                                               ")
+print(np.delete(c,2)) #delete(array,index)
+print("----------------------------------------------------------")
+print(d)
+print("                                               ")
+print(np.delete(d,2,axis=0)) #delete(array,index,axis(0=นอน)(1=ตั้ง)
+print(np.delete(d,2,axis=1)) #delete(array,index,axis(0=นอน)(1=ตั้ง)
+print("                                               ")
+
+print(np.delete(d,(1,2),axis=0))
+print(np.delete(d,(1,2),axis=1))
